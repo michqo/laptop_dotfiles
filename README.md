@@ -8,7 +8,7 @@
 
 Clone the repo in home dir `~/`
 ```
-git clone https://github.com/MichalUSER/laptop_dotfiles.git
+git clone https://github.com/MichalUSER/laptop_dotfiles.git dotfiles
 ```
 
 Run the install script - creates symlinks
