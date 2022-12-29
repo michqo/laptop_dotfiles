@@ -11,6 +11,8 @@ Clone the repo in home dir `~/`
 git clone https://github.com/MichalUSER/laptop_dotfiles.git dotfiles
 ```
 
+**WARNING: Backup `.config`, `.bin` etc before proceeding.**
+
 Run the install script - creates symlinks
 ```bash
 cd dotfiles
