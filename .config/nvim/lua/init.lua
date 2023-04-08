@@ -29,7 +29,6 @@ local npairs = require("nvim-autopairs")
 require('nvim-autopairs').setup({
   disable_filetype = { "TelescopePrompt" , "vim" },
 })
-
 npairs.setup({
   check_ts = true,
   ts_config = {
@@ -48,6 +47,7 @@ require("nvim_comment").setup({
 -- treesitter
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
+    "html",
     "javascript",
     "typescript",
     "svelte",
@@ -63,6 +63,10 @@ require'nvim-treesitter.configs'.setup {
   },
   autotag = {
     enable = true,
+    filetypes = {
+      'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'tsx', 'jsx',
+      'css', 'lua', 'xml', 'php', 'markdown'
+    }
   },
   context_commentstring = {
     enable = true,
