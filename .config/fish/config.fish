@@ -5,12 +5,12 @@ alias py 'python'
 alias pn 'pnpm'
 alias nv 'nvim'
 alias p 'paru'
+alias activate 'source $(poetry env info --path)/bin/activate.fish'
 alias grub-update 'sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias sr='source ~/.config/fish/config.fish'
 
 # User abbreviations
 abbr ytmp3 'yt-dlp --extract-audio --audio-format mp3'
-abbr update 'p -Syyu'
 
 # bin
 set -x PATH $HOME/.local/bin $PATH
@@ -22,9 +22,9 @@ set -x PATH $HOME/.cargo/bin $PATH
 # zoxide
 zoxide init fish | source
 
-# Bun
-set -Ux BUN_INSTALL "/home/michal/.bun"
-set -px --path PATH "/home/michal/.bun/bin"
+# pnpm
+set -gx PNPM_HOME "/home/michal/.local/share/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
 
 # Env
 set -gx EDITOR nv
@@ -84,8 +84,3 @@ set -g fish_pager_color_prefix $cyan
 set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $comment
 
-
-# pnpm
-set -gx PNPM_HOME "/home/michal/.local/share/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
-# pnpm end
